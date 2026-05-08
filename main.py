@@ -6,7 +6,10 @@ from flask import Flask, send_from_directory, request, jsonify
 # Added for public server----------------------------
 import os 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-import re
+from punctuation import (
+    restore_punctuation,
+    clear_stanza_from_memory,
+)
 #----------------------------------------------------
 from flask_sock import Sock
 from flask_cors import CORS
@@ -24,6 +27,7 @@ from collections import deque
 
 from model_registry import DEFAULT_CONFIG, SUPPORTED_MODELS
 from simple_websocket.errors import ConnectionClosed
+
 
 class ModelManager:
    def __init__(self, available_models, device_name, preferred_dtype):
@@ -175,37 +179,6 @@ except Exception as e:
 
 
 # --- Helper functions ---
-
-# Added for public server----------------------------
-def format_text(text: str) -> str:
-    if not text:
-        return ""
-
-    # normalize spaces
-    text = " ".join(text.split())
-
-    # lowercase everything first
-    text = text.lower()
-
-    # capitalize first letter of string + after punctuation
-    text = re.sub(r'(^|[.!?]\s+)([a-záčđŋšŧžæøå])',
-                  lambda m: m.group(1) + m.group(2).upper(),
-                  text)
-
-    return text
-
-def simple_punctuation(text: str) -> str:
-    text = text.strip()
-
-    if not text:
-        return ""
-
-    if text[-1] not in ".!?":
-        text += "."
-
-    return text
-    # ------------------------------------------------
-
 def process_audio_task(audio_input, config, send_fn):
    """Transkriberer lydklipp med valgt modell og sender tekst."""  
    model_name = config.get('MODEL_NAME', DEFAULT_CONFIG['MODEL_NAME'])
@@ -289,12 +262,24 @@ def process_audio_task(audio_input, config, send_fn):
                 if transcription:
                     print(f"Transkribert: {transcription}")
 
-                    formatted = format_text(transcription)
-                    final_text = simple_punctuation(formatted)
+                    # Restore punctuation
+                    if config.get("PUNCTUATION_ENABLED", True):
+                        try:
+                            punctuated = restore_punctuation(
+                                transcription,
+                                lang=config.get("PUNCTUATION_LANG", "sme"),
+                            )
+
+                            transcription = punctuated.text
+
+                            print(f"Punktuert: {transcription}")
+
+                        except Exception as punct_exc:
+                            print(f"Punctuation restoration feilet: {punct_exc}")
 
                     send_fn({
                         "type": "transcription",
-                        "text": final_text,
+                        "text": transcription,
                     })
                 else:
                     print("Ingen tekst gjenkjent.")
@@ -308,6 +293,14 @@ def process_audio_task(audio_input, config, send_fn):
    finally:
        # Avoid per-request empty_cache(), which can introduce long pauses under load.
        gc.collect()
+
+       # Added for public server-------------------
+       # Optional cleanup of Stanza GPU memory
+       try:
+           clear_stanza_from_memory()
+       except Exception:
+           pass
+       #-------------------------------------------
 
        # Disabled for public server:
        #if torch.cuda.is_available():

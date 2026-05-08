@@ -8,3 +8,4 @@ transformers
 soundfile
 librosa
 silero-vad
+stanza
