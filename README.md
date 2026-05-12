@@ -28,7 +28,7 @@ The application can translate from Northern Sámi into the following languages:
 | --- | --- | --- |
 | `GetmanY1/wav2vec2-large-sami-cont-pt-22k-finetuned` | Wav2Vec2 CTC | Lightweight model trained on Sámi Parliament recordings, outputs Northern Sámi text (CTC). |
 
-The Wav2Vec2 model requires mono PCM 16 kHz audio. The model always runs in float32; on GPU it uses less VRAM, but CPU loading times may be longer.
+The Wav2Vec2 model requires mono PCM 16 kHz audio. The model always runs in float32.
 
 ## Using Docker (recommended)
 
@@ -127,11 +127,11 @@ docker run --gpus all -p 5000:5000 transkripsjon-samisk-norsk
 ## Web interface
 
 - **Same machine:** Open a browser and go to [http://localhost:5000](http://localhost:5000)
-- **Another device on the network:** Find the server IP address (for example `192.168.1.123`) and open `http://DIN_IP_ADRESSE:5000`
+- **Another device on the network:** Find the server IP address (for example `192.168.1.123`) and open `http://YUOR_IP_ADDRESS:5000`
 
 **Usage:**
 - Click **«Start recording»** and allow microphone access in the browser.
-- Speak Northern Sámi. The transcribed Northern Sami text appears in the left box, and the translation follows shortly after in the right box.
+- Speak Northern Sámi. The transcribed Northern Sámi text appears in the left box, and the translation follows shortly after in the right box.
 - Select **target language** from the dropdown menu (visible when “Translation” or “Both” is selected).
 - Use the buttons **«Transcription»**, **«Translation»** og **«Both»** to choose which text boxes are displayed.
 - Click **«Stop recording»** to finish.
@@ -140,7 +140,7 @@ docker run --gpus all -p 5000:5000 transkripsjon-samisk-norsk
 
 ## Architecture
 
-- **Backend (Python):** Handles audio streaming, speech recognition via Wav2Vec2, and Voice Activity Detection (VAD)
+- **Backend (Python):** Handles audio streaming, speech recognition via Wav2Vec2, Voice Activity Detection (VAD) and punctuation restoration
 - **Frontend (JavaScript):** Receives transcribed text and calls the TartuNLP Tahetorn_9B to translate into the selected language
 - **API:** TartuNLP Tahetorn_9B provides free machine translation between Northern Sámi and other Sámi languages as well as some national languages
 
