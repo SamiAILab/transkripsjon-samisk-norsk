@@ -6,7 +6,7 @@ import re
 import threading
 from dataclasses import dataclass
 from functools import lru_cache
-from typing import List, Optional, Tuple
+from typing import List
 
 logger = logging.getLogger(__name__)
 
@@ -56,8 +56,8 @@ def _load_stanza_pipeline(lang: str = "nb"):
     try:
         # Initialize pipeline with tokenization, POS tagging, and dependency parsing
         # These features help with punctuation placement
-        # Use GPU when available for faster processing
-        import torch
+        # Force CPU usage for stability and to avoid GPU contention with ASR
+        
         use_gpu = False
         
         nlp = stanza.Pipeline(
@@ -66,7 +66,7 @@ def _load_stanza_pipeline(lang: str = "nb"):
             tokenize_no_ssplit=False,  # Allow sentence splitting
             verbose=False,
             download_method=None,  # Don't auto-download during initialization
-            use_gpu=use_gpu,  # Use GPU when available (will be unloaded after use)
+            use_gpu=use_gpu,  # Force CPU execution to avoid GPU contention with ASR
         )
         
         device_info = "GPU" if use_gpu else "CPU"
