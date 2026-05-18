@@ -1,4 +1,4 @@
-
+# THIS HAS NOT BEEN UPDATED FOR PUBLIC SERVER VERSION!
 # Filename: run-transkripsjon.ps1
 # Usage: Run from an elevated PowerShell window on Windows 10/11 Home or Pro
 

@@ -1,41 +1,41 @@
-# Bruk et offisielt NVIDIA CUDA base-image.
+# Use an official NVIDIA CUDA base image.
 FROM nvidia/cuda:12.9.1-cudnn-devel-ubuntu24.04
 
-# Sett miljøvariabler
+# Set environment variables
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=Europe/Oslo
-# Forteller transformers-biblioteket hvor cachen skal ligge
+# Tells the transformers library where the cache should be located
 ENV TRANSFORMERS_CACHE=/root/.cache/huggingface
 
-# Installer systemavhengigheter
+# Install system dependencies
 RUN apt-get update && apt-get install -y \
     python3 \
     python3-pip \
     ffmpeg \
     && rm -rf /var/lib/apt/lists/*
 
-# Sett arbeidsmappen
+# Set the working folder
 WORKDIR /app
 
-# Kopier requirements-filen og installer avhengigheter
+# Copy the requirements file and install dependencies
 COPY requirements.txt .
-# Legger til --break-system-packages for å tillate pip-installasjon på Ubuntu 24.04
+# Adding --break-system-packages to allow pip installation on Ubuntu 24.04
 RUN pip3 install --no-cache-dir --break-system-packages torch torchaudio --index-url https://download.pytorch.org/whl/cu129
 RUN pip3 install --no-cache-dir --break-system-packages -r requirements.txt
 
-# Last ned og cache modellene under bygging
-# Kopier kun nedlastingsskriptet og modellregisteret først
+# Download and cache the models during building
+# Copy only the download script and model registry first
 COPY download_model.py model_registry.py ./
-# Kjør skriptet for å laste ned modellen. Dette steget vil ta tid.
+# Run the script to download the model. This step will take some time.
 RUN python3 download_model.py
-# Slett skriptet etterpå for å holde imaget rent
+# Delete the script afterwards to keep the image clean.
 RUN rm download_model.py
 
-# Kopier resten av applikasjonsfilene
+# Copy the rest of the application files
 COPY . .
 
-# Informer Docker om at containeren vil lytte på port 5000
+# Inform Docker that the container will listen on port 5000
 EXPOSE 5000
 
-# Kommandoen som skal kjøres når containeren starter
+# The command that runs when the container starts
 CMD ["python3", "main.py"]
