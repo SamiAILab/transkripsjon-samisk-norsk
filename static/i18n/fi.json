@@ -95,6 +95,10 @@
       "a": "Pohjoissaamea voidaan kääntää useille kielille, kuten suomeksi, norjaksi, englanniksi sekä muihin saamen kieliin. Saatavilla olevat kielet esitetään kohdekielivalikossa."
     },
     {
+      "q": "Miksi ruotsi ei ole tuettu käännöskieli?",
+      "a": "Ábon käännöstuki riippuu TartuNLP:n Tahetorn_9B-mallissa saatavilla olevista kielipareista. Heidän kehitystyö keskittyy ensisijaisesti suomalais-ugrilaisiin kieliin. Tämän vuoksi ruotsi ei ole tällä hetkellä tuettu kieli."
+    },
+    {
       "q": "Voivatko ihmiset nyt esimerkiksi Helsingin metrossa ymmärtää, mitä puhun saameksi?",
       "a": "Kyllä, jos he käyttävät Áboa."
     },

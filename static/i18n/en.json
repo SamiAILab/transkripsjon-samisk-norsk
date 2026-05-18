@@ -95,6 +95,10 @@
       "a": "You can translate Northern Sámi into several languages, including Norwegian, Finnish, English and other Sámi languages. The available options are shown in the language selector."
     },
     {
+      "q": "Why is Swedish not supported as a translation language?",
+      "a": "Translation support in Ábo depends on the language pairs available through TartuNLP Tahetorn_9B model. Their work focuses primarily on Finno-Ugric languages. Swedish is therefore not currently supported."
+    },
+    {
       "q": "Can people in Oslo understand what I'm saying on the metro now?",
       "a": "Well yes, if they use Ábo."
     },
