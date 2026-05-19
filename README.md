@@ -1,14 +1,6 @@
-This is my own version of the Samisk–Norsk transcription project. 
+https://samiailab.samas.no/abo/
 
-Original: https://github.com/tbitu/transkripsjon-samisk-norsk
-
-Edited for public server.
-
-
-
-
-
-# Real-time transcription and translation
+# ÁBO - Real-time transcription and translation
 
 This project is a real-time simultaneous translator that transcribes Northern Sámi speech into text and then translates the text into a selected target language. The solution is built with a Python backend for transcription and a web interface that handles translation, using the following services:
 - **Transcription (backend):** `GetmanY1/wav2vec2-large-sami-cont-pt-22k-finetuned`
@@ -45,7 +37,7 @@ You can easily run the project using the prebuilt Docker image from GitHub Conta
 **Command:**
 
 ```bash
-docker run --gpus all -p 5000:5000 ghcr.io/maggamaa/transkripsjon-samisk-norsk:latest
+docker run --gpus all -p 5000:5000 ghcr.io/SamiAILab/transkripsjon-samisk-norsk:latest
 ```
 
 - `--gpus all`: Gives the Docker container access to all NVIDIA GPUs
@@ -61,7 +53,7 @@ When the container is running, open [http://localhost:5000](http://localhost:500
 #### a. Clone the repository
 
 ```bash
-git clone https://github.com/maggamaa/transkripsjon-samisk-norsk.git
+git clone https://github.com/SamiAILab/transkripsjon-samisk-norsk.git
 cd transkripsjon-samisk-norsk
 ```
 
@@ -160,3 +152,4 @@ docker run --gpus all -p 5000:5000 transkripsjon-samisk-norsk
 - **Translation:** [TartuNLP Tahetorn_9B](https://github.com/tbitu/sami-translation-backend)
 - **Voice Activity Detection:** [Silero VAD](https://github.com/snakers4/silero-vad)
 - **Punctuation Restoration:** [Stanza NLP](https://stanfordnlp.github.io/stanza/)
+- **Original repository:** [Tarjei Bitustøyl](https://github.com/tbitu/transkripsjon-samisk-norsk)
