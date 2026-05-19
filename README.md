@@ -141,6 +141,7 @@ docker run --gpus all -p 5000:5000 transkripsjon-samisk-norsk
 ## Troubleshooting
 
 - Missing GPU/driver errors: Verify that NVIDIA drivers and [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html) are correctly installed.
+- CUDA version mismatch: Docker image was built with CUDA 12.9 your device might have an older version. Downgrade to a known, stable CUDA version in the Docker image.
 - CPU fallback is supported, but performance is significantly lower with large models.
 - **Translation not working:** Check your internet connection, since translation requires access to the TartuNLP API.
 
