@@ -15,6 +15,7 @@
     "eng": "English",
     "nor": "Norwegian",
     "fin": "Finnish",
+    "rus": "Russian",
     "sme": "Northern Sámi",
     "sma": "Southern Sámi",
     "smj": "Lule Sámi",
@@ -116,7 +117,7 @@
     },
     {
       "q": "Can I rely on the transcription and translation results?",
-      "a": "Accuracy can vary depending on speech clarity and dialect. For best results speak clearly, avoid background noise, use a good microphone and speak at a natural pace."
+      "a": "Accuracy can vary depending on speech clarity and dialect. For best results speak clearly, avoid background noise, use a good microphone and speak at a natural pace. Machine translation can make mistakes."
     },
     {
       "q": "Why does translation take a moment?",

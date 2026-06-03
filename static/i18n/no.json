@@ -15,6 +15,7 @@
     "eng": "Engelsk",
     "nor": "Norsk",
     "fin": "Finsk",
+    "rus": "Russisk",
     "sme": "Nordsamisk",
     "sma": "Sørsamisk",
     "smj": "Lulesamisk",
@@ -95,6 +96,10 @@
       "a": "Du kan oversette nordsamisk til flere språk, inkludert norsk, finsk, engelsk og andre samiske språk. Tilgjengelige alternativer vises i språkvelgeren."
     },
     {
+      "q": "Hvorfor støttes ikke svensk som oversettelsesspråk?",
+      "a": "Oversettelsesstøtten i Ábo avhenger av hvilke språkpar som er tilgjengelige gjennom TartuNLPs Tahetorn_9B-modell. Arbeidet deres fokuserer primært på finsk-ugriske språk. Svensk er derfor foreløpig ikke støttet."
+    },
+    {
       "q": "Kan folk i Oslo forstå hva jeg sier på T-banen nå?",
       "a": "Ja, hvis de bruker Ábo."
     },
@@ -112,7 +117,7 @@
     },
     {
       "q": "Kan jeg stole på transkripsjonene og oversettelsene?",
-      "a": "Nøyaktigheten kan variere avhengig av tydelighet i tale og dialekt. For best resultat bør du snakke tydelig, unngå bakgrunnsstøy, bruke en god mikrofon og holde et naturlig tempo."
+      "a": "Nøyaktigheten kan variere avhengig av tydelighet i tale og dialekt. For best resultat bør du snakke tydelig, unngå bakgrunnsstøy, bruke en god mikrofon og holde et naturlig tempo. Maskinoversettelse kan gjøre feil."
     },
     {
       "q": "Hvorfor tar oversettelsen litt tid?",

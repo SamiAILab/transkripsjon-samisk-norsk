@@ -15,6 +15,7 @@
     "eng": "Englanti",
     "nor": "Norja",
     "fin": "Suomi",
+    "rus": "Venäjä",
     "sme": "Pohjoissaame",
     "sma": "Eteläsaame",
     "smj": "Luulajansaame",
@@ -116,7 +117,7 @@
     },
     {
       "q": "Voiko transkriptioihin ja käännöksiin luottaa?",
-      "a": "Tulosten tarkkuus vaihtelee puheen selkeyden ja murteen mukaan. Parhaan tuloksen saavuttamiseksi suositellaan selkeää puhetta, taustamelun minimointia, laadukkaan mikrofonin käyttöä sekä luonnollista puhenopeutta."
+      "a": "Tulosten tarkkuus vaihtelee puheen selkeyden ja murteen mukaan. Parhaan tuloksen saavuttamiseksi suositellaan selkeää puhetta, taustamelun minimointia, laadukkaan mikrofonin käyttöä sekä luonnollista puhenopeutta. Konekäännös voi tehdä virheitä."
     },
     {
       "q": "Miksi kääntäminen kestää hetken?",

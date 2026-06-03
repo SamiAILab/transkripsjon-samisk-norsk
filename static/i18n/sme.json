@@ -15,6 +15,7 @@
     "eng": "Eŋgelasgiella",
     "nor": "Dárogiella",
     "fin": "Suomagiella",
+    "rus": "Ruoššagiella",
     "sme": "Davvisámegiella",
     "sma": "Lullisámegiella",
     "smj": "Julevsámegiella",
@@ -63,8 +64,80 @@
       "t": "Dávjá jearahuvvon gažaldagat"
     },
     {
-      "q": "",
-      "a": "Boađi boađi."
+      "q": "Mii lea dát bálvalus?",
+      "a": "Ábo lea Sámegielaid realáigásaš transkriberen- ja jorgalanreaidu. Dat rievdada njálmmálaš davvisámegiela tekstii ja dat sáhttá jorgalit dan máŋgga eará gillii."
+    },
+    {
+      "q": "Mii lea bálvalusa ulbmil?",
+      "a": "Ábo ulbmilin lea doarjut sámegielaid geavaheami beaivválaš gulahallamis. Dat galgá addit vejolašvuođa sámegiela geavaheapmái maiddái dakkár dilálašvuođain, gos eará olbmot eai ipmir sámegiela."
+    },
+    {
+      "q": "Masa sáhttá Ábo geavahit?",
+      "a": "Reaidu lea ráhkaduvvon eallináigásaš geavahussii, nugo čoahkkimiidda dahje ságastallamiidda sámiid ja eai-sámiid gaskka. Danin sáhttá Ábo geavahit gulahallamii olbmuiguin geat eai ipmir sámegiela. Dasa lassin sáhttá geavahit jietnadeami hárjehallamii, jos leat oahpahallame sámegiela, dahje ráhkadit čálalaš sámegielat teavsttaid hupmama bokte ja sihke geavahit daid e-poasttain dahje eará dokumeanttain. Bálvalus lea ovdánan áiggi mielde, ja ođđa geavahanvuogit riegádit fálaldagaid lassáneami mielde."
+    },
+    {
+      "q": "Manin Ábo dušše transkribere Davvisámegiela?",
+      "a": "Dálá veršuvdna vuođđuduvvá modeallaide, mat leat oahpahuvvon vuosttažettiin Davvisámegiela materiála vuođul. Dát lea dán áiggi viidámus ja buoremus boahtán materiálavuohki."
+    },
+    {
+      "q": "Ipmirdago Ábo iešguđetlágan Davvisámegiela suopmaniid?",
+      "a": "Ábo lea oahpahuvvon jietnabáikkálaš materiálaid vuođul, mat leat boahtán Yle Sápmi ja Norgga Sámedikki čoahkkimiin. Dan dihte sáhttá dat muhtun muddui ipmirdit suopmanerohusaid, boahtá das mii oahpahusmateriálas lea mielde."
+    },
+    {
+      "q": "Leago eará sámegielaide boahtime doarjja?",
+      "a": "Ulbmilin lea lasihit doarjaga eará sámegielaide boahtteáiggis, go buoret materiálat ja modeallat šaddet olámuttus."
+    },
+    {
+      "q": "Manin bálvalus ii transkribere dárogiela, suomagiela dahje eŋgelasgiela?",
+      "a": "Stuorát našuvnnalaš gielaide leat juo olámuttus viidát geavahuvvon reaiddut, nugo Google Translate, mat doarjot sihke transkriberema ja jorgaleami. Ábo guovddušta sámegielaide, main leat uhcit doarjogeainnut dálá teknologiijain."
+    },
+    {
+      "q": "Makkár gielaide sáhttá jorgalit?",
+      "a": "Davvisámegiela sáhttá jorgalit máŋgga gillii, nugo dárogillii, suomagillii, eŋgelasgillii ja eará sámegielaide. Vejolaš molssaeavttut čájehuvvojit giellaválljenreaiddus."
+    },
+    {
+      "q": "Manne ii doarjjo ruoŧagiela jorgalangiellan?",
+      "a": "Ábo jorgalandoarjja boahtá dain giellapárain, mat leat olámuttos TartuNLP Tahetorn_9B-modeallas. Sin barggu guovddážis leat vuosttažettiin finnougralaš gielat. Danne ii sáhte ruoŧagillii jorgalit vel."
+    },
+    {
+      "q": "Sáhttetgo olbmot Oslos dahje Helssegis ipmirdit maid cealkkán metro:s dál?",
+      "a": "Juo, jus sii geavahit Ábo-bálvalusa."
+    },
+    {
+      "q": "Manin iige sáhte lástet bajás jietnafiillaid?",
+      "a": "Servera kapasitehta geažil ii sáhte dál lástet bajás jietnafiillaid. Jus dárbbašat jietnafiillaid transkriberet, Norgga nationálagirjerájus (Nasjonalbiblioteket) fállá reaidduid davvisámegiela (https://huggingface.co/spaces/NbAiLab/whisper-sami-demo) ja julevsámegiela (https://huggingface.co/spaces/NbAiLab/whisper-lule-sami-demo) várás. Jus dát bálvalusat eai leat olámuttus, sáhtát váldit oktavuođa e-poastta bokte čujuhussii nb@nb.no."
+    },
+    {
+      "q": "Gáibiduvvogo makkárge sajáiduhttin?",
+      "a": "Ii. Bálvalus doaibmá njuolga neahttalohkkis. Dárbbašat dušše dohkkehit mikrofovnna geavaheami."
+    },
+    {
+      "q": "Doaibmágo bálvalus sivaid haga?",
+      "a": "Mii fállat bálvalusa nu bures go vejolaš, muhto muhtun meattáhusat ja boatkaneamit sáhttet dáhpáhuvvat."
+    },
+    {
+      "q": "Sáhtángo luohttit transkriberemii ja jorgaleapmái?",
+      "a": "Dárkilvuohta sáhttá rievdat jietnadeami ja suopmana mielde. Vai oaččut buriid bohtosiid fertet hupmat čielgasit, váruhit jienaid duohken, geavahit buori mikrofovnna ja doallat lunddolaš hupmanleahtu. Mašiidnajorgaleapmi sáhttá dagahit meattáhusaid."
+    },
+    {
+      "q": "Manne ádjána jorgaleapmi?",
+      "a": "Jietna gieđahallojuvvo oanehis osiin. Álggos transkriberejuvvo, ja dan maŋŋil jorgaluvvo, mainna šattat veahá vuordit."
+    },
+    {
+      "q": "Mii dáhpáhuvvá mu dáhtaide go geavahan bálvalusa?",
+      "a": "Du jietna sáddejuvvo serverii, gos dat transkriberejuvvo ja jus dárbbašuvvo maiddái jorgaluvvo. Bohtosat sáddejuvvojit ruovttoluotta du neahttalohkkái. Buot gieđahallojuvvo realáiggis ja sihkkojuvvo njuolgut maŋŋil gieđahallama. Ii jietna iige teaksta vurkejuvvo iige juhkkojuvvo gosage."
+    },
+    {
+      "q": "Gii oamasta Ábo?",
+      "a": "Ábo lea vuođđuduvvon rabas teknologiijaide, ii ge oamastuvvo. Koda ja modeallat, maid vuođul dat huksejuvvo, leat rahpasat, mii mearkkaša ahte buohkat sáhttet ráhkadit iežaset veršuvnna dahje heivehit dan iežaset dárbbuide. Oassálastin ja ovttasbargu leat bures boahtin."
+    },
+    {
+      "q": "Gii lea Ábo-bálvalusa vásttolaš?",
+      "a": "Bálvalusa doaimmaha Sámi AI Lab Sámi allaskuvllas."
+    },
+    {
+      "q": "Man ollu máksá geavahit Ábo?",
+      "a": "Ábo lea nuvttá geavahit. Sámi allaskuvla ruhtada dán bálvalusa veahkkin olles sámi servodahkii. Ovdáneapmi dorjojuvvo ovttaskas vehkiin."
     }
   ]
 }
