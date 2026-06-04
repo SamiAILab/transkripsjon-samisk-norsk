@@ -11,6 +11,7 @@ This project is a real-time simultaneous translator that transcribes Northern S�
 The application can translate from Northern Sámi into the following languages:
 - Norwegian
 - Finnish
+- Russian
 - English
 - **Sámi languages:** Northern Sámi (improved text), Southern Sámi, Lule Sámi, Inari Sámi, Skolt Sámi, Kildin Sámi, Pite Sámi, Ume Sámi
 

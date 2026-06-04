@@ -50,6 +50,7 @@
                     <option value="sme">Davvisámegiella</option>
                     <option value="no">Norsk</option>
                     <option value="fi">Suomi</option>
+                    <option value="ru">Русский</option>
                     <option value="en">English</option>                
                 </select>
             </div>
@@ -171,6 +172,7 @@
             no: 'nor',
             en: 'eng',
             fi: 'fin',
+            ru: 'rus',
             sme: 'sme'
         };
 
@@ -182,7 +184,7 @@
         const SOURCE_LANGUAGE = 'sme'; // wav2vec2 outputs Northern Sámi
 
         // Multilanguage UI support for public server
-        const SUPPORTED_UI_LANGS = ['sme', 'no', 'fi', 'en'];
+        const SUPPORTED_UI_LANGS = ['sme', 'no', 'fi', 'ru', 'en'];
         const DEFAULT_UI_LANG = 'no';
         const UI_STRINGS = {};
   
